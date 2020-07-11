@@ -6,6 +6,7 @@ import { store } from './store'
 
 import './index.css'
 import App from './App'
+import { SearchPage } from './pages/searchPage'
 import * as serviceWorker from './serviceWorker'
 
 ReactDOM.render(
@@ -13,8 +14,11 @@ ReactDOM.render(
     <Provider store={store}>
       <Router>
         <Switch>
-          <Route path="/">
+          <Route path="/" exact>
             <App />
+          </Route>
+          <Route path="/search" exact>
+            <SearchPage />
           </Route>
         </Switch>
       </Router>
